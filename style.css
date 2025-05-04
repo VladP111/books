@@ -1,1 +1,17 @@
+body {
+
+position: absolute;
+width: 1140px;
+height: 662px;
+
+background: #8787FF;
+
+}
+logo {
+
+position: absolute;
+width: 113px;
+height: 20px;
+color: #ABE7F8;
+}
 
