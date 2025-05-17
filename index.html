@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сайт для продажу книжок</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <title>ReadMe - Книжковий магазин</title>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"/>
 </head>
-  
-  <body>
-
-    <div id="main-menu" class="menu">
-      <img id="logo" src="image.png" alt="Logo">
-      <button class = "home-button"> Головна </button> 
-      <button class = "catalog-button"> Каталог </button>
-      <button class = "search-button"> Пошук </button>
-      <button class = "bascket-button"> Кошик</button>
-        <h1>
-            <span>Найкращі книжки для вас!</span>     
-        </h1>
-      <h2> Кижки зі знишкою <h2>
-        
-                </h1>
-        <button class="shop-button">1</button>
-       <button class="shop-button">2</button>
-               <button class="shop-button">3</button>
-               <button class="shop-button">4</button>
-        <h3> © 2025 ReadMe. Всі права захищені. <h3>
- </div>
+<body>
+    <header>
+        <div class="container">
+            <img src="/mnt/data/img-readme-logo.png" alt="ReadMe Logo" class="logo"/>
+            <nav>
+                <ul>
+                    <li><a id="nav-home">Головна</a></li>
+                    <li><a id="nav-catalog">Каталог</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <button aria-label="Пошук" id="search-toggle">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button aria-label="Кошик" id="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="search-bar hidden" id="search-bar">
+            <input aria-label="Пошук книг" id="search-input" placeholder="Пошук книг..." type="text"/>
+        </div>
+    </header>
+    <main>
+        <section id="home-section">
+            <h2>Найкращі книжки для тебе!</h2>
+            <p>Вибирай цікаві книги, щоб читати і розвиватися. Тут є все: від пригод до фантастики!</p>
+            <h3>Книжки зі знижкою</h3>
+            <div id="discount-books-grid"></div>
+        </section>
+        <section id="catalog-section" class="hidden">
+            <h3>Каталог книг</h3>
+            <div id="books-grid"></div>
+        </section>
+        <section id="cart-section" class="hidden">
+            <h3>Кошик</h3>
+            <div id="cart-items">
+                <p>Кошик порожній</p>
+            </div>
+          
+            <div>
+                <p id="cart-total">Всього: ₴0</p>
+                <button id="checkout-btn" disabled>Оформити замовлення</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>© 2025 ReadMe. Всі права захищені.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </body>
 </html>
-  
