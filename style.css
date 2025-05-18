@@ -20,7 +20,8 @@ header {
 }
 
 .logo {
-    height: 48px;
+    height: 200px;
+    width: 200px;
 }
 
 nav {
@@ -28,6 +29,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
+    font-size: 200;
 }
 
 nav ul {
