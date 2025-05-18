@@ -117,7 +117,19 @@ const books = [
   
   { id: 59, title: "Гаррі Поттер і смертельні реліквії", author: "Джоан Ролінґ", price: 240, discount: 0, genre: "Фентезі", img: "https://upload.wikimedia.org/wikipedia/uk/f/fd/HP_and_the_Deathly_Hallows_UKR.jpg", alt: "Обкладинка книги Гаррі Поттер і смертельні реліквії" },
   
-  { id: 60, title: "Кривавий меридіан", author: "Кормак Маккарті", price: 225, discount: 0, genre: "Роман", img: "https://uabooks.co.ua/wp-content/uploads/2024/09/krivavij-meridian-abo-vechirnya-zagrava-na-zahodi.jpg", alt: "Обкладинка книги Кривавий меридіан" }
+  { id: 60, title: "Кривавий меридіан", author: "Кормак Маккарті", price: 225, discount: 0, genre: "Роман", img: "https://uabooks.co.ua/wp-content/uploads/2024/09/krivavij-meridian-abo-vechirnya-zagrava-na-zahodi.jpg", alt: "Обкладинка книги Кривавий меридіан" },
+
+  {id: 61, title: "Кобзар", author: "Тарас Шевченко", price : 235, discount: 10, genre:"Оповідання ", img:"https://static.yakaboo.ua/media/cloudflare/product/webp/600x840/i/m/img_12076.jpg"},
+
+  {id: 62, title: "Чотири сезони", author: "Стівен Кінг", price : 300, discount: 5, genre:"Оповідання ", img:"https://bookclub.ua/images/db/goods/55089_103969.jpg"},
+
+  {id: 63, title: "Заради майбутьного", author: "Макс Кідрук", price : 200, discount: 0, genre:"Оповідання ", img:"https://nashformat.ua/files/products/ebook-zarady-majbutnogo-621581.330x300.jpeg"},
+
+  {id: 64, title: "Пуаро веде слідство", author: "Агата Крісті", price : 200, discount: 10, genre:"Оповідання ", img:"https://bookclub.ua/images/db/goods/52555_94088.jpg"},
+
+  {id: 65, title: "Пастка для різника", author: "Юрій Даценко", price : 200, discount: 15, genre:"Детектив", img:"https://bookclub.ua/images/db/goods/61696_122774.jpg"},
+
+  {id: 66, title: "Код да Вінчі", author: "Ден Браун", price : 300, discount: 0, genre:"Трилер", img:"https://upload.wikimedia.org/wikipedia/uk/7/72/Da_vinci_code.jpg"}
 ];
 
 let cart = [];
@@ -156,7 +168,7 @@ function renderBooks(filter = '') {
         const bookCard = document.createElement('div');
         bookCard.className = 'book-card';
         let priceHTML = `<p class="book-price">₴${book.price}</p>`;
-        if (book.discount && book.discount > 0) {
+        if (book.discount && book.discount == 0) {
             const newPrice = discountedPrice(book.price, book.discount);
             priceHTML = `
                 <p class="price-old">₴${book.price}</p>
@@ -487,4 +499,5 @@ renderBooks();
 renderDiscountBooks();
 updateCartUI();
 showSection('home');
+
 
