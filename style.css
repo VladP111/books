@@ -22,6 +22,14 @@ header {
 .logo {
     height: 200px;
     width: 200px;
+    object-fit: contain;      
+    border-radius: 50%;          
+    padding: 16px;               
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);     
 }
 
 nav {
@@ -407,3 +415,130 @@ footer {
     font-size: 0.9em;
     margin-left: 10px;
 }
+
+@media (min-width: 1400px) {
+    .container {
+      max-width: 1440px;
+      padding: 0 32px;
+    }
+  
+    .book-img {
+      width: 200px;
+      height: 300px;
+    }
+  
+    .logo {
+      height: 240px;
+      width: 240px;
+    }
+  
+    h2 {
+      font-size: 2.5rem;
+    }
+  
+    h3 {
+      font-size: 2rem;
+    }
+  
+    p, .book-title, .book-author, .book-price {
+      font-size: 1.25rem;
+    }
+  
+    .btn-buy, .btn-small {
+      font-size: 1.125rem;
+      padding: 10px 28px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .logo {
+      height: 150px;
+      width: 150px;
+    }
+  
+    nav ul li {
+      margin-right: 16px;
+    }
+  
+    .book-img {
+      width: 140px;
+      height: 210px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+        height: 200px;
+        width: 200px;
+    }
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-buttons {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    nav ul li {
+      margin: 8px 0;
+    }
+  
+    .book-img {
+      width: 120px;
+      height: 180px;
+    }
+  
+    .container {
+      padding: 0 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      height: 200px;
+      width: 200px;
+    }
+  
+    h2, h3, p {
+      font-size: 1.25rem;
+    }
+  
+    .book-img {
+      width: 100px;
+      height: 150px;
+    }
+  
+    .book-title {
+      font-size: 1rem;
+    }
+  
+    .book-price,
+    .price-new,
+    .price-old {
+      font-size: 1rem;
+    }
+  
+    .btn-buy,
+    .btn-small {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+  
+    #discount-books-grid, #books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+  
+    .cart-item {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  
