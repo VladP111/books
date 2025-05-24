@@ -468,8 +468,8 @@ footer {
   
   @media (max-width: 768px) {
     .logo {
-        height: 200px;
-        width: 200px;
+        height: 150px;
+        width: 150px;
     }
     nav {
       flex-direction: column;
@@ -503,8 +503,8 @@ footer {
   
   @media (max-width: 480px) {
     .logo {
-      height: 200px;
-      width: 200px;
+      height: 100px;
+      width: 100px;
     }
   
     h2, h3, p {
