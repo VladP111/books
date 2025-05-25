@@ -304,6 +304,30 @@ footer {
     background-color: #1D4ED8;
 }
 
+.btn-buy {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+
+.btn-buy:before,
+.btn-buy:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-buy:before {
+  height: 0%;
+  width: 2px;
+
 .btn-small {
     background-color: #2563EB;
     color: #DBEAFF;
